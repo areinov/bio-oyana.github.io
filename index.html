@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стасик Свобода | визитка</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="animated-bg">
+        <div class="gradient-sphere"></div>
+        <div class="gradient-sphere second"></div>
+        <div class="grid-overlay"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Эффект курсора (исправлен) -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <!-- Переключатель темы -->
+    <div class="theme-switch-wrapper">
+        <button class="theme-switch" id="themeToggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="theme-slider"></span>
+        </button>
+    </div>
+
+    <div class="container">
+        <!-- Блок 1: Профиль -->
+        <div class="block profile-block">
+            <div class="profile-header">
+                <div class="avatar-wrapper">
+                    <img src="https://sun23-2.userapi.com/s/v1/ig2/PZSx1tV6OCCmujZe5Sm5a7dQ1JHoVLHEL9RlZuTcn83xSOfupnD4Lu2adkKL100GPSdaugXaN2FBw9mL9CdPuYcD.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&from=bu&cs=1280x0" alt="ава" class="avatar">
+                    <div class="avatar-ring"></div>
+                </div>
+                <div class="profile-info">
+                    <h1 class="glitch-text" data-text="Артём Соколов">Стасик Свобода</h1>
+                    <div class="profile-meta">
+                        <span class="meta-item"><i class="fas fa-map-pin"></i> Мозырь</span>
+                        <span class="meta-item"><i class="fas fa-calendar"></i> 17 лет</span>
+                        <span class="meta-item"><i class="fas fa-briefcase"></i> Не работаю</span>
+                    </div>
+                    <p class="bio">🍔 Люблю кушать · 🎮 Задрот · 📱 Mobile Legends player</p>
+                </div>
+            </div>
+        </div>
+
+      <!-- Блок 2: Соцсети -->
+<div class="block social-block">
+    <div class="block-header">
+        <i class="fas fa-share-alt"></i>
+        <h2>социальные сети:</h2>
+    </div>
+    <div class="social-grid">
+        <!-- ТЕЛЕГРАМ -->
+        <a href="https://t.me/areinov" class="social-item tg" target="_blank">
+            <i class="fab fa-telegram"></i>
+            <span>@areinov</span>
+        </a>
+        
+        <!-- ИНСТАГРАМ -->
+        <a href="https://www.instagram.com/01s_sd/" class="social-item ig" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span>@01s_sd</span>
+        </a>
+        
+        <!-- TIKTOK -->
+        <a href="https://tiktok.com/@oyanaosu" class="social-item tt" target="_blank">
+            <i class="fab fa-tiktok"></i>
+            <span>@oyanaosu</span>
+        </a>
+        
+        <!-- VK -->
+        <a href="https://vk.com/1h6gb" class="social-item vk" target="_blank">
+            <i class="fab fa-vk"></i>
+            <span>Стасик Свобода</span>
+        </a>
+        
+        <!-- DISCORD (не работает как ссылка, лучше показывать ник) -->
+        <a href="https://discord.com" class="social-item dc" onclick="copyDiscord('areinov'); return false;">
+            <i class="fab fa-discord"></i>
+            <span>areinov</span>
+        </a>
+        
+        <!-- СПОТИФАЙ -->
+        <a href="#" class="social-item spotify" target="_blank">
+            <i class="fab fa-spotify"></i>
+            <span>Soon..</span>
+        </a>
+    </div>
+</div>
+
+        <!-- Блок 3: Треки -->
+        <div class="block music-block">
+            <div class="block-header">
+                <i class="fas fa-headphones-alt"></i>
+                <h2>сейчас в плейлисте</h2>
+                <span class="badge">4 трека</span>
+            </div>
+            <div class="track-list">
+                <div class="track">
+                    <div class="track-cover">🎵</div>
+                    <div class="track-info">
+                        <span class="track-name">ДВИГАЙ ТЕЛОМ</span>
+                        <span class="track-artist">Baby Melo</span>
+                    </div>
+                    <span class="track-duration">2:26</span>
+                </div>
+                <div class="track">
+                    <div class="track-cover">🎵</div>
+                    <div class="track-info">
+                        <span class="track-name">True Love</span>
+                        <span class="track-artist">Kanye West & XXXTENTACION</span>
+                    </div>
+                    <span class="track-duration">2:18</span>
+                </div>
+                <div class="track">
+                    <div class="track-cover">🎵</div>
+                    <div class="track-info">
+                        <span class="track-name">Карамель</span>
+                        <span class="track-artist">Scally Milano</span>
+                    </div>
+                    <span class="track-duration">2:30</span>
+                </div>
+                <div class="track">
+                    <div class="track-cover">🎵</div>
+                    <div class="track-info">
+                        <span class="track-name">ХОЧУ</span>
+                        <span class="track-artist">uglystephan</span>
+                    </div>
+                    <span class="track-duration">1:59</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 4: Активности -->
+        <div class="block activities-block">
+            <div class="activities-grid">
+                <div class="activity-col">
+                    <div class="col-header">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>игры</h3>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Mobile Legends</span>
+                        <span class="tag">Majestic RP</span>
+                        <span class="tag">GTA 5</span>
+                        <span class="tag">Minecraft</span>
+                        <span class="tag">Soon..</span>
+                        <span class="tag">Soon..</span>
+                    </div>
+                </div>
+                <div class="activity-col">
+                    <div class="col-header">
+                        <i class="fas fa-tv"></i>
+                        <h3>сериалы</h3>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Поворот не туда.</span>
+                        <span class="tag">Ривердейл.</span>
+                        <span class="tag">Молодежка.</span>
+                        <span class="tag">Голодные игры.</span>
+                        <span class="tag">Аниме:)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 5: Инфо + Контакт -->
+        <div class="block info-contact-block">
+            <div class="info-contact-grid">
+                <div class="info-section">
+                    <div class="block-header small">
+                        <i class="fas fa-user"></i>
+                        <h2>Обо мне</h2>
+                    </div>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span>02 Сентября 2008</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>МГКС, 3 курс</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-paw"></i>
+                            <span>Котик Буля, Кошка Запиканочка<3</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Пивас</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <button class="contact-btn" id="contactBtn">
+                        <i class="fab fa-telegram"></i>
+                        <span>написать в тг</span>
+                    </button>
+                    <p class="contact-note">Обычно онлайн ночью!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 6: Активность сейчас -->
+        <div class="block activity-now">
+            <div class="now-grid">
+                <div class="now-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>в доте</span>
+                </div>
+                <div class="now-item">
+                    <i class="fas fa-music"></i>
+                    <span>слушает фонк</span>
+                </div>
+                <div class="now-item">
+                    <i class="fas fa-coffee"></i>
+                    <span>пьет кофе</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
