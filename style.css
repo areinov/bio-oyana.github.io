@@ -832,8 +832,6 @@ body.light-theme {
 /* Активность сейчас */
 .activity-now {
     padding: 16px;
-    text-align: center;
-    color:#7e7d7d;
 }
 
 .now-grid {
@@ -920,7 +918,4 @@ body.light-theme {
         gap: 10px;
         align-items: stretch;
     }
-
 }
-
-
