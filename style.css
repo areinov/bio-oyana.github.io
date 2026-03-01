@@ -922,3 +922,65 @@ body.light-theme {
     }
 }
 
+/* Стили для плеера */
+.track-play {
+    opacity: 0;
+    transition: opacity 0.2s;
+    color: var(--accent);
+}
+
+.track:hover .track-play {
+    opacity: 1;
+}
+
+.track.playing {
+    background: var(--accent);
+    color: white;
+}
+
+.track.playing .track-name,
+.track.playing .track-artist,
+.track.playing .track-duration {
+    color: white;
+}
+
+.mini-player {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--accent);
+    border-radius: 20px;
+    animation: slideUp 0.3s;
+}
+
+.now-playing {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#currentTrackName {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#currentTrackArtist {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+#audioPlayer {
+    width: 100%;
+    height: 40px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

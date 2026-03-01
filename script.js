@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Скрипт загружен');
     
@@ -196,3 +197,69 @@ if (contactBtn) {
         window.open(url, '_blank');
     });
 }
+// Плеер
+const tracks = document.querySelectorAll('.track');
+const audioPlayer = document.getElementById('audioPlayer');
+const miniPlayer = document.getElementById('miniPlayer');
+const currentTrackName = document.getElementById('currentTrackName');
+const currentTrackArtist = document.getElementById('currentTrackArtist');
+
+let currentlyPlaying = null;
+
+tracks.forEach(track => {
+    track.addEventListener('click', function(e) {
+        e.stopPropagation();
+        
+        const src = this.dataset.src;
+        const name = this.querySelector('.track-name').textContent;
+        const artist = this.querySelector('.track-artist').textContent;
+        
+        // Если трек уже играет - ставим на паузу
+        if (currentlyPlaying === this && !audioPlayer.paused) {
+            audioPlayer.pause();
+            this.classList.remove('playing');
+            currentlyPlaying = null;
+            return;
+        }
+        
+        // Убираем класс playing с предыдущего трека
+        tracks.forEach(t => t.classList.remove('playing'));
+        
+        // Добавляем класс playing текущему треку
+        this.classList.add('playing');
+        
+        // Показываем мини-плеер
+        miniPlayer.style.display = 'block';
+        
+        // Обновляем информацию
+        currentTrackName.textContent = name;
+        currentTrackArtist.textContent = artist;
+        
+        // Загружаем и играем трек
+        audioPlayer.src = src;
+        audioPlayer.play();
+        
+        currentlyPlaying = this;
+    });
+});
+
+// Когда трек закончился
+audioPlayer.addEventListener('ended', function() {
+    tracks.forEach(t => t.classList.remove('playing'));
+    currentlyPlaying = null;
+});
+
+// Иконка паузы/плей
+audioPlayer.addEventListener('play', function() {
+    const playIcon = currentlyPlaying?.querySelector('.track-play i');
+    if (playIcon) {
+        playIcon.className = 'fas fa-pause';
+    }
+});
+
+audioPlayer.addEventListener('pause', function() {
+    const playIcon = currentlyPlaying?.querySelector('.track-play i');
+    if (playIcon) {
+        playIcon.className = 'fas fa-play';
+    }
+});

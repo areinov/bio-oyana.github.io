@@ -97,47 +97,61 @@
 </div>
 
         <!-- Блок 3: Треки -->
-        <div class="block music-block">
-            <div class="block-header">
-                <i class="fas fa-headphones-alt"></i>
-                <h2>сейчас в плейлисте</h2>
-                <span class="badge">4 трека</span>
+<div class="block music-block">
+    <div class="block-header">
+        <i class="fas fa-headphones-alt"></i>
+        <h2>сейчас в плейлисте</h2>
+        <span class="badge">4 трека</span>
+    </div>
+    <div class="track-list" id="trackList">
+        <div class="track" data-src="baby-melo-dvigajj-telom.mp3">
+            <div class="track-cover">🎵</div>
+            <div class="track-info">
+                <span class="track-name">ДВИГАЙ ТЕЛОМ</span>
+                <span class="track-artist">Baby Melo</span>
             </div>
-            <div class="track-list">
-                <div class="track">
-                    <div class="track-cover">🎵</div>
-                    <div class="track-info">
-                        <span class="track-name">ДВИГАЙ ТЕЛОМ</span>
-                        <span class="track-artist">Baby Melo</span>
-                    </div>
-                    <span class="track-duration">2:26</span>
-                </div>
-                <div class="track">
-                    <div class="track-cover">🎵</div>
-                    <div class="track-info">
-                        <span class="track-name">True Love</span>
-                        <span class="track-artist">Kanye West & XXXTENTACION</span>
-                    </div>
-                    <span class="track-duration">2:18</span>
-                </div>
-                <div class="track">
-                    <div class="track-cover">🎵</div>
-                    <div class="track-info">
-                        <span class="track-name">Карамель</span>
-                        <span class="track-artist">Scally Milano</span>
-                    </div>
-                    <span class="track-duration">2:30</span>
-                </div>
-                <div class="track">
-                    <div class="track-cover">🎵</div>
-                    <div class="track-info">
-                        <span class="track-name">ХОЧУ</span>
-                        <span class="track-artist">uglystephan</span>
-                    </div>
-                    <span class="track-duration">1:59</span>
-                </div>
-            </div>
+            <span class="track-duration">2:25</span>
+            <span class="track-play"><i class="fas fa-play"></i></span>
         </div>
+        <div class="track" data-src="Scally Milano & 163ONMYNECK - Дофамин.mp3">
+            <div class="track-cover">🎵</div>
+            <div class="track-info">
+                <span class="track-name">Дофамин</span>
+                <span class="track-artist">Scally Milano, 163ONMYNECK</span>
+            </div>
+            <span class="track-duration">1:50</span>
+            <span class="track-play"><i class="fas fa-play"></i></span>
+        </div>
+         <div class="track" data-src="madk1d - типичная ситуация.mp3">
+            <div class="track-cover">🎵</div>
+            <div class="track-info">
+                <span class="track-name">Типичная ситуация</span>
+                <span class="track-artist">madk1d</span>
+            </div>
+            <span class="track-duration">2:10</span>
+            <span class="track-play"><i class="fas fa-play"></i></span>
+        </div>
+        <div class="track" data-src="IVOXYGEN – Internet Love.mp3">
+            <div class="track-cover">🎵</div>
+            <div class="track-info">
+                <span class="track-name">Internet Love</span>
+                <span class="track-artist">IVOXYGEN</span>
+            </div>
+            <span class="track-duration">2:29</span>
+            <span class="track-play"><i class="fas fa-play"></i></span>
+        </div>
+        <!-- Добавь остальные треки -->
+    </div>
+    
+    <!-- Мини-плеер -->
+    <div class="mini-player" id="miniPlayer" style="display: none;">
+        <div class="now-playing">
+            <span id="currentTrackName">Trap</span>
+            <span id="currentTrackArtist">Big Baby Tape</span>
+        </div>
+        <audio id="audioPlayer" controls></audio>
+    </div>
+</div>
 
         <!-- Блок 4: Активности -->
         <div class="block activities-block">
@@ -213,7 +227,7 @@
         <div class="block activity-now">
 <!-- Внутри подвала (footer) -->
 <footer>
-    <p>&copy; 2026 Oyana. Все права защищены, полное либо частичное копирование запрещено.</p>
+    <p>&copy; 2026 Официальный ресурс Oyana.<br>Все права защищены, полное либо частичное копирование запрещено.</p>
 </footer>
 
     </div>>
